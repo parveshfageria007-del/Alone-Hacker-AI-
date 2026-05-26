@@ -31,9 +31,8 @@ jobs:
       - name: Build Application
         run: npm run build --if-present
 
-      - name: Sync Capacitor
+      - name: Sync Capacitor Android
         run: |
-          npx cap init "Alone Hacker AI" "net.alonehacker.ai" --web-dir=out --skip-assets || true
           npx cap add android || true
           npx cap sync android
 
